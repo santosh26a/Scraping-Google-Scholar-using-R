@@ -1,6 +1,8 @@
 #Scraping Google Scholar for citations
 library(XML)
 citations <- vector("list")
+
+# ArticleList is a data file with all the input data such as Article Title, Authors etc. You can import it using read.csv if it is in csv file
 sleep_times <- seq(20, 70, length.out = length(ArticleList$ArticleTitle))
 #userAgent <- read.table("user_agents.txt")
 for (i in 1:length(ArticleList$ArticleTitle)) {
